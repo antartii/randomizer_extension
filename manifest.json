@@ -1,0 +1,9 @@
+{
+    "manifest_version":3,
+    "name": "Randomizer",
+    "description": "Extension made to use randomized games",
+    "version": "1.0",
+    "action": {
+        "default_popup": "popup/popup.html"
+    }
+}

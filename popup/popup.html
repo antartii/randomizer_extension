@@ -1,0 +1,74 @@
+<!DOCTYPE html/>
+<html>
+    <head>
+        <link href="./popup.css" rel="stylesheet"/>
+    </head>
+
+    <body>
+        <nav>
+            <button id="navCoinFlip">Coin Flip</button>
+            <button id="navDice">Dice</button>
+            <button id="navRange">Range</button>
+            <button id="navRoulette">Roulette</button>
+        </nav>
+
+        <div id="coinFlipDiv" class="item">
+            <h2>CoinFlip</h2>
+            <p id="coinFlipResult"></p>
+            <label><input id="edgeCheck" type="checkbox"/>Include 1/6000 chance to fall on the edge</fieldset></label>
+            <button id="coinFlipButton">Flip</button>
+        </div>
+
+        <div id="diceDiv" class="item" hidden>
+            <h2>Dice</h2>
+            <p id="diceResult"></p>
+            <select id="diceSelect">
+                <option value="6">6 faces</option>
+                <option value="8">8 faces</option>
+                <option value="10">10 faces</option>
+                <option value="12">12 faces</option>
+                <option value="20">20 faces</option>
+            </select>
+            <button id="diceButton">Roll the dice</button>
+        </div>
+
+        <div id="rangeDiv" class="item" hidden>
+            <h2>Random Range</h2>
+            <p id="rangeResult"></p>
+            <label>Min : <input id="minRange" type="number"></label>
+            <label>Max : <input id="maxRange" type="number"></label>
+            <label><input id="floatCheck" type="checkbox"/>Include float numbers</label>
+            <select id="rangeSelect">
+                <option value="bothInclusive">Both Inclusive</option>
+                <option value="bothExclusive">Both Exclusive</option>
+                <option value="minExclusive">Min Exclusive</option>
+                <option value="maxExclusive">Max Exclusive</option>
+            </select>
+            <label id="decimalsLabel" hidden>
+                Decimals number (max 12)
+                <input id="decimalsNumber" type="number" placeholder="type a number..." max="12" min="1" step="1" value="1"/>
+            </label>
+            <button id="rangeButton">Start</button>
+        </div>
+
+        <div id="rouletteDiv" class="item" hidden>
+            <h1>Roulette</h1>
+            <p id="rouletteResult"></p>
+            <div class="optionDiv">
+                <label class="labelOptionName">
+                    option 1
+                </label>
+                <input type="text" class="optionInput"/>
+                <button class="addRouletteButton">add</button>
+                <button class="delRouletteButton" hidden>delete</button>
+            </div>
+            <button id="startRoulette">Start</button>
+        </div>
+
+        <script src="./popup.js"></script>
+        <script src="../scripts/coinFlip.js"></script>
+        <script src="../scripts/dice.js"></script>
+        <script src="../scripts/range.js"></script>
+        <script src="../scripts/roulette.js"></script>
+    </body>
+</html>
